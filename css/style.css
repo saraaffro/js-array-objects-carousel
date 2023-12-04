@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.carousel{
+    width: 50%;
+    height: 50%;
+}
+
+.element-container{
+    position: relative;
+    height: 100%;
+}
+
+.element{
+    display: none;
+    height: 100%;
+    text-align: center;
+}
+
+.element img{
+    width: auto;
+    height: 100%;
+}
+
+.active{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+.fa-solid{
+    background-color: rgba(211, 211, 211, 0.606);
+    border-radius: 50%;
+    padding: 7px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.next-button{
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.back-button{
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
