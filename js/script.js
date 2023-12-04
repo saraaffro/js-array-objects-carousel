@@ -72,24 +72,24 @@ nextButton.addEventListener("click", function(){
 
     if(activeElement < element.length -1){
         // tolgo classe active
-        element[activeElement].classList.remove("active");
+        removeClass("active");
 
         // incremento indice dell'elemento per andare all'elemento successivo
         activeElement++;
 
         // aggiungo classe active al prossimo elemento
-        element[activeElement].classList.add("active");
+        addClass("active");
     }// ciclo infinito
     else if(activeElement === element.length -1){
     
         // tolgo classe active
-        element[activeElement].classList.remove("active");
+        removeClass("active");
 
         // torno a indice 0
         activeElement = 0;
 
         // aggiungo classe active al prossimo elemento
-        element[activeElement].classList.add("active");
+        addClass("active");
    }
    
 });
@@ -102,23 +102,35 @@ backButton.addEventListener("click", function(){
 
     if(activeElement > 0){
         // tolgo classe active all'elemento precedente
-        element[activeElement].classList.remove("active");
+        removeClass("active");
 
         // decremento incide dell'elemento per andare all'elemento precedente 
         activeElement--;
 
         // aggiungo classe active all'elemento
-        element[activeElement].classList.add("active");
+        addClass("active");
     }   // ciclo infinito
     else if(activeElement === 0){
         
         // tolgo classe active
-        element[activeElement].classList.remove("active");
+        removeClass("active");
 
         // torno a ultimo indice 
         activeElement = 4;
 
         // aggiungo classe active al prossimo elemento
-        element[activeElement].classList.add("active");
+        addClass("active");
     }
 });
+
+
+// FUNZIONI
+// aggiuno classe ad element
+function addClass(classname){
+    element[activeElement].classList.add(classname);
+};
+
+// rimuovo classe ad element
+function removeClass(classname){
+    element[activeElement].classList.remove(classname);
+};
