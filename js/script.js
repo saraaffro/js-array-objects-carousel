@@ -22,9 +22,34 @@ const images = [
     { image: 'img/05.webp', title: "Marvel's Avengers", text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.', } 
 ];
 
-// seleziono div element
+// seleziono div 
 const element = document.getElementsByClassName("element");
-// console.log(element);
+const divContainer = document.querySelector(".container");
+
+const carousel = 
+`<div class="carousel">
+    <div class="element-container">
+        <div class="element active">
+            <img src="${images[0].image}" alt="immagine">
+        </div>
+        <div class="element">
+            <img src="${images[1].image}" alt="immagine">
+        </div>
+        <div class="element">
+            <img src="${images[2].image}" alt="immagine">
+        </div>
+        <div class="element">
+            <img src="${images[3].image}" alt="immagine">
+        </div>
+        <div class="element">
+            <img src="${images[4].image}" alt="immagine">
+        </div>
+        <div class="next-button"><i class="fa-solid fa-arrow-up"></i></div>
+        <div class="back-button"><i class="fa-solid fa-arrow-down"></i></div>
+    </div>
+</div>`
+
+divContainer.innerHTML += carousel;
 
 // setto elemento con classe active che farà cambiare immagine
 let activeElement = 0;
