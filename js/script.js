@@ -79,7 +79,19 @@ nextButton.addEventListener("click", function(){
 
         // aggiungo classe active al prossimo elemento
         element[activeElement].classList.add("active");
-    }
+    }// ciclo infinito
+    else if(activeElement === element.length -1){
+    
+        // tolgo classe active
+        element[activeElement].classList.remove("active");
+
+        // torno a indice 0
+        activeElement = 0;
+
+        // aggiungo classe active al prossimo elemento
+        element[activeElement].classList.add("active");
+   }
+   
 });
 
 // seleziono back-button
@@ -96,6 +108,17 @@ backButton.addEventListener("click", function(){
         activeElement--;
 
         // aggiungo classe active all'elemento
+        element[activeElement].classList.add("active");
+    }   // ciclo infinito
+    else if(activeElement === 0){
+        
+        // tolgo classe active
+        element[activeElement].classList.remove("active");
+
+        // torno a ultimo indice 
+        activeElement = 4;
+
+        // aggiungo classe active al prossimo elemento
         element[activeElement].classList.add("active");
     }
 });
