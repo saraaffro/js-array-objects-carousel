@@ -24,45 +24,24 @@ const images = [
 
 // seleziono div 
 const element = document.getElementsByClassName("element");
-const divContainer = document.querySelector(".container");
+const elementContainer = document.querySelector(".element-container");
 
-const carousel = 
-`<div class="carousel">
-    <div class="element-container">
-        <div class="element active">
-            <img src="${images[0].image}" alt="immagine">
-            <div class="title">${images[0].title}</div>
-            <div class="description">${images[0].text}</div>
-        </div>
-        <div class="element">
-            <img src="${images[1].image}" alt="immagine">
-            <div class="title">${images[1].title}</div>
-            <div class="description">${images[1].text}</div>
-        </div>
-        <div class="element">
-            <img src="${images[2].image}" alt="immagine">
-            <div class="title">${images[2].title}</div>
-            <div class="description">${images[2].text}</div>
-        </div>
-        <div class="element">
-            <img src="${images[3].image}" alt="immagine">
-            <div class="title">${images[3].title}</div>
-            <div class="description">${images[3].text}</div>
-        </div>
-        <div class="element">
-            <img src="${images[4].image}" alt="immagine">
-            <div class="title">${images[4].title}</div>
-            <div class="description">${images[4].text}</div>
-        </div>
-        <div class="next-button"><i class="fa-solid fa-arrow-up"></i></div>
-        <div class="back-button"><i class="fa-solid fa-arrow-down"></i></div>
-    </div>
-</div>`
-
-divContainer.innerHTML += carousel;
+for (let i = 0; i < images.length; i++){
+    let divEelment = 
+    `<div class="element">
+        <img src="${images[i].image}" alt="immagine">
+        <div class="title">${images[i].title}</div>
+        <div class="description">${images[i].text}</div>
+    </div>`;
+    elementContainer.innerHTML += divEelment;
+}
 
 // setto elemento con classe active che farà cambiare immagine
 let activeElement = 0;
+
+if(activeElement === 0){
+    addClass("active");
+}
 
 // seleziono next-button
 const nextButton = document.querySelector(".next-button");
